@@ -1,0 +1,98 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Encriptar</button>
+
+
+<script>
+  
+    
+    var input = document.getElementById("mensaje");
+    input.focus();
+    var textoEncriptado = [];
+    
+    function hacerEncriptado(){
+        alert(input)
+        
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = hacerEncriptado;
+
+    console.log(textoEncriptado)
+
+
+
+
+
+
+        let comprobar = document.querySelector("#textoEntrante").value;
+
+        var noPermitidos="0123456789´)(¬~$%|&./\'!\"*+-[]#@ABCDEFGHYJKLMNÑOPQRSTUVWXYZ\\";           
+
+        function tiene_numeros(comprobar){
+            for(i=0; i<texto.length; i++){
+                if (noPermitidos.indexOf(comprobar.charAt(i),0)!=-1){
+                    alert(ingrese sólo letras mayúsculas);
+                }
+            }
+                   return 0;
+        }          
+
+                function tiene_mayusculas(texto){
+                   for(i=0; i<texto.length; i++){
+                      if (letras_mayusculas.indexOf(texto.charAt(i),0)!=-1){
+                         alert(no puede ingresar mayúsculas);
+                      }
+                   }
+                   return 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function encriptado(){
+                    var textoRecibido = document.querySelector("#textoEntrante").value;
+        
+                    var reemplazando = textoRecibido.replaceAll("e","enter");
+                    var reemplazando= reemplazando.replaceAll("i","imes");
+                    var reemplazando= reemplazando.replaceAll("a","ai");
+                    var reemplazando= reemplazando.replaceAll("o","ober");
+                    var reemplazando= reemplazando.replaceAll("u","ufat");
+                    
+
+                    document.querySelector(".mensaje").innerHTML = reemplazando;
+                    console.log(reemplazando)
+                }
+
+                function desencriptado(){
+                    var textoRecibido = document.querySelector("#textoEntrante").value;
+        
+                    var reemplazando = textoRecibido.replaceAll("enter","e");
+                    var reemplazando= reemplazando.replaceAll("imes","i");
+                    var reemplazando= reemplazando.replaceAll("ai","a");
+                    var reemplazando= reemplazando.replaceAll("ober","o");
+                    var reemplazando= reemplazando.replaceAll("ufat","u");
+                    
+
+                    document.querySelector(".mensaje").innerHTML = reemplazando;
+                    console.log(reemplazando)
+                }
+</script>

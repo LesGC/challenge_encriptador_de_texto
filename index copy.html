@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador Les</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-encriptador.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1 class="tituloPrincipal">Encriptador</h1>
+        </header>
+
+        <main>   
+            <section>
+                
+                <form class="textoIngresado">
+                    <div>
+                        <label for="textoEntrante">Ingrese aqui su texto</label>
+                        <input id="textoEntrante" type="text" placeholder="Ejemplo: mi secreto es..." required pattern="[a-z]" title="Ingrese sólo letras minúsculas" autofocus title="Ingrese sólo letras minúsculas"  /> 
+                        <span class="validity"></span> 
+                    </div> 
+
+                    <div class="textoDevuelto">
+                        <label for="mensaje">Su respuesta aparecerá aqui</label>
+                        <textarea id="mensaje" cols="70" rows="10" class="mensaje" disabled readonly> </textarea>
+                    </div>
+
+                    <div>
+                    <h6 class="informacion">Sólo letras minúsculas y sin acentos</h6>
+                    </div>   
+                            
+                    <div class="botones">
+                        <button id= "botonEncriptar" onclick="encriptado()">Encriptar</button>
+                        <button id= "botonDesencriptar" onclick="desencriptado()">Desencriptar</button>
+                    </div>
+                </form>
+                
+                <script>
+                    function vaciarInput() {
+                        document.getElementById("textoEntrante").value = "";
+                    }
+                                function encriptado(){
+                                    let lowercaseLetter = /^[a-zñ\s]+$/g;
+        
+                                    
+                                    var textoRecibido = document.getElementById("textoEntrante").value;
+
+                                
+                                    if (textoRecibido == "" ) { 
+                                        
+                                        alert(" Ingresa algún texto para encriptar");
+                                    
+                                    } else if (textoRecibido.match(lowercaseLetter) == null) {
+                                        alert("Ingresa solo letras minúsculas y sin acentos");
+                                        vaciarInput();
+                                        }
+                                    else {
+
+                                        var reemplazando = textoRecibido.replaceAll("e","enter");
+                                        var reemplazando= reemplazando.replaceAll("i","imes");
+                                        var reemplazando= reemplazando.replaceAll("a","ai");
+                                        var reemplazando= reemplazando.replaceAll("o","ober");
+                                        var reemplazando= reemplazando.replaceAll("u","ufat");
+                                        
+
+                                        document.querySelector(".mensaje").innerHTML = reemplazando;
+                                        console.log(reemplazando)
+                                        }
+                                }
+
+                                function desencriptado(){
+                                    let lowercaseLetter = /^[a-zñ\s]+$/g;   
+                                    var textoRecibido = document.getElementById("textoEntrante").value;
+                                    if (textoRecibido == "" ) { 
+                                        alert(" Ingresa algún texto para encriptar");
+                                    
+                                        } else if (textoRecibido.match(lowercaseLetter) == null) {
+                                            alert("Ingresa solo letras minúsculas y sin acentos");
+                                            vaciarInput();
+                                            }
+                                    else {
+                                        var reemplazando = textoRecibido.replaceAll("enter","e");
+                                        var reemplazando= reemplazando.replaceAll("imes","i");
+                                        var reemplazando= reemplazando.replaceAll("ai","a");
+                                        var reemplazando= reemplazando.replaceAll("ober","o");
+                                        var reemplazando= reemplazando.replaceAll("ufat","u");
+                                
+
+                                        document.querySelector(".mensaje").innerHTML = reemplazando;
+                                        console.log(reemplazando);
+                                    }
+                                }
+                    
+                </script>
+            </section>
+
+            
+                    
+            
+
+            
+
+            
+
+        </main>
+
+
+        <footer>
+            
+
+        </footer>
+        
+
+
+
+
+    </body>
+
+    
