@@ -1,5 +1,5 @@
-const textArea = document.querySelector(".text-area");
-const mensajeDevuelto = document.querySelector(".mensaje");
+const textArea = document.querySelector(".mensaje-entrada");
+const mensajeDevuelto = document.querySelector(".mensaje-salida");
 
 function botonEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
@@ -35,6 +35,27 @@ function desencriptar(stringDesencriptada){
     }
     return stringDesencriptada
 }
+function botonCopiar(){
+    const boton = document.getElementById("copiar");
+    const texto = document.getElementById("mensaje");
+
+    boton.addEventListener("click", function() {
+        texto.select();
+        document.execCommand("copy");
+      });
+    
+}
+botonCopiar();
+
+/*function botonLimpiar(){
+    const textArea = document.querySelector(".mensaje-entrada");
+    const mensajeDevuelto = document.querySelector(".mensaje-salida");
+
+    textArea.value = "";
+    mensajeDevuelto.value = "";
+    mensajeDevuelto.style.backgroundImage = "none"
+}*/
+
  
 
 
