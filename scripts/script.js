@@ -47,14 +47,14 @@ function botonCopiar(){
 }
 botonCopiar();
 
-/*function botonLimpiar(){
+function botonLimpiar(){
     const textArea = document.querySelector(".mensaje-entrada");
     const mensajeDevuelto = document.querySelector(".mensaje-salida");
 
     textArea.value = "";
     mensajeDevuelto.value = "";
     mensajeDevuelto.style.backgroundImage = "none"
-}*/
+}
 
  
 

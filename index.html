@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador Les</title>
-        <link rel="stylesheet" href="./reset.css">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./header.css">
-        <link rel="stylesheet" href="./areas-texto.css">
-        <link rel="stylesheet" href="./area-texto.css">
-        <link rel="stylesheet" href="./advertencia.css">
-        <link rel="stylesheet" href="./botones.css">
-        <link rel="stylesheet" href="./boton-individual.css">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/areas-texto.css">
+        <link rel="stylesheet" href="./styles/area-texto.css">
+        <link rel="stylesheet" href="./styles/advertencia.css">
+        <link rel="stylesheet" href="./styles/botones.css">
+        <link rel="stylesheet" href="./styles/boton-individual.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
@@ -37,16 +37,16 @@
                        
             <section class="botones">
                 <div class="boton-individual">
-                  <button class="boton-encriptar">Encriptar</button>
+                  <button class="boton-encriptar" onclick="botonEncriptar()">Encriptar</button>
                 </div>
                 <div class="boton-individual">
-                    <button class="boton-desencriptar">Desencriptar</button>
+                    <button class="boton-desencriptar"onclick="botonDesencriptar()">Desencriptar</button>
                 </div>
                 <div class="boton-individual">
                     <button class="copiar" id="copiar" onclick="botonCopiar()">Copiar</button>
                 </div>
                 <div class="boton-individual">
-                    <button class="limpiar" id="limpiar">Limpiar</button>
+                    <button class="limpiar" id="limpiar"onclick="botonLimpiar()">Limpiar</button>
                 </div>
                     
                     
@@ -65,7 +65,7 @@
         </main>        
         <footer>
         </footer>        
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
     </body>
     
 
