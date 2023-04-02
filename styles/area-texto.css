@@ -15,7 +15,7 @@
     }
     
 .mensaje-salida{
-    background-image: url(./imagenes/recurso3.png);
+    background-image: url(/imagenes/recurso3.png);
     background-repeat: no-repeat;
     background-position: center;
     color: #0A3871;
